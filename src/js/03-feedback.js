@@ -34,7 +34,7 @@ refers.form.addEventListener('submit', onSubmit);
 
 function onSubmit(e) {
   e.preventDefault();
-  console.log(currentFormState);
+  console.log(JSON.parse(localStorage.getItem('feedback-form-state')));
   localStorage.removeItem('feedback-form-state');
   e.currentTarget.reset();
 }
